@@ -1,1 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Devon Ian Suryono | CV</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f3f4f6;
+            color: #1f2937;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* MAIN CONTAINER */
+        .container {
+            max-width: 1100px;
+            margin: 40px auto;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            background: #111827;
+            color: white;
+            padding: 35px 28px;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .profile img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #374151;
+            margin-bottom: 15px;
+        }
+
+        .profile h1 {
+            font-size: 25px;
+            margin-bottom: 5px;
+        }
+
+        .profile p {
+            color: #9ca3af;
+            font-size: 14px;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-section h2 {
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #60a5fa;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #374151;
+        }
+
+        .contact-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 12px;
+            font-size: 14px;
+            color: #d1d5db;
+        }
+
+        .contact-icon {
+            width: 20px;
+            color: #60a5fa;
+        }
+
+        .skill {
+            margin-bottom: 15px;
+        }
+
+        .skill-header {
+            display: flex;
+            justify-content: space-between;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            width: 100%;
+            height: 7px;
+            background: #374151;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: #60a5fa;
+            border-radius: 10px;
+        }
+
+        .social-link {
+            display: block;
+            margin-bottom: 10px;
+            color: #d1d5db;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .social-link:hover {
+            color: #60a5fa;
+        }
+
+        /* CONTENT */
+        .content {
+            padding: 45px 50px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e5e7eb;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 60px;
+            height: 2px;
+            background: #2563eb;
+        }
+
+        .about-text {
+            color: #4b5563;
+            font-size: 15px;
+        }
+
+        /* EXPERIENCE */
+        .timeline-item {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 30px;
+            border-left: 2px solid #dbeafe;
+        }
+
+        .timeline-item::before {
+            content: "";
+            position: absolute;
+            left: -7px;
+            top: 3px;
+            width: 12px;
+            height: 12px;
+            background: #2563eb;
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            font-size: 18px;
+            color: #111827;
+            margin-bottom: 3px;
+        }
+
+        .company {
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .date {
+            font-size: 13px;
+            color: #6b7280;
+            margin: 5px 0 10px;
+        }
+
+        .timeline-item p {
+            color: #4b5563;
+            font-size: 14px;
+        }
+
+        .timeline-item ul {
+            margin: 10px 0 0 20px;
+            color: #4b5563;
+            font-size: 14px;
+        }
+
+        /* EDUCATION */
+        .education-item {
+            margin-bottom: 25px;
+        }
+
+        .education-item h3 {
+            font-size: 17px;
+            margin-bottom: 3px;
+        }
+
+        .education-item .school {
+            color: #2563eb;
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .project {
+            border: 1px solid #e5e7eb;
+            padding: 20px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .project:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+        }
+
+        .project h3 {
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .project p {
+            color: #6b7280;
+            font-size: 14px;
+        }
+
+        .tags {
+            margin-top: 12px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #eff6ff;
+            color: #2563eb;
+            padding: 4px 9px;
+            border-radius: 4px;
+            font-size: 11px;
+            margin: 2px;
+        }
+
+        /* BUTTON */
+        .download-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 18px;
+            background: #2563eb;
+            color: white;
+            border-radius: 6px;
+            font-size: 14px;
+            transition: 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #1d4ed8;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+
+            .container {
+                margin: 0;
+                display: block;
+            }
+
+            .sidebar {
+                padding: 35px 25px;
+            }
+
+            .content {
+                padding: 35px 25px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* PRINT */
+        @media print {
+
+            body {
+                background: white;
+            }
+
+            .container {
+                margin: 0;
+                box-shadow: none;
+            }
+
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="profile">
+
+            <!-- Replace with your own photo -->
+            <img src="me.jpeg" alt="Your Photo">
+
+            <h1>Devon Ian Suryono</h1>
+
+            <p>Cyber Security Analytics</p>
+
+        </div>
+
+
+        <!-- CONTACT -->
+
+        <div class="sidebar-section">
+
+            <h2>Contact</h2>
+
+            <div class="contact-item">
+                <span class="contact-icon">📧</span>
+                <span>devonians2014@gmail.com</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">📱</span>
+                <span>+62 85773917739</span>
+            </div>
+
+            <div class="contact-item">
+                <span class="contact-icon">📍</span>
+                <span>Jakarta, Indonesia</span>
+            </div>
+
+  
+        </div>
+
+
+        <!-- SKILLS -->
+
+        <div class="sidebar-section">
+
+            <h2>Skills</h2>
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Nmap</span>
+                    <span>90%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 90%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>WireShark</span>
+                    <span>80%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 80%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>C language</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%;"></div>
+                </div>
+
+            </div>
+
+
+            <div class="skill">
+
+                <div class="skill-header">
+                    <span>Python</span>
+                    <span>60%</span>
+                </div>
+
+                <div class="skill-bar">
+                    <div class="skill-progress" style="width: 85%;"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SOCIAL LINKS -->
+
+
+    </aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+
+    <main class="content">
+
+
+        <!-- ABOUT -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
+            <p class="about-text">
+                <li> I'm a underrgaduate From Binus University, and im ready to work in your company.</li>
+                <li>For starters Im majoring in Cyber Security, I can use most of the tools that are
+                required to work in the Cyber Security Field.</li>
+                <li>I can speak both Indonesian and English fluenty.</li>
+                <li>My hobbies are reading, basketball and doing random researches.</li>
+            </p>
+
+            <a href="#" class="download-btn" onclick="window.print()">
+                Download / Print CV
+            </a>
+
+        </section>
+
+
+        <!-- EXPERIENCE -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Work Experience
+            </h2>
+
+
+            <div class="timeline-item">
+
+                <h3>Barista</h3>
+
+                <div class="company">
+                    "SNB Cafe" and "Ticovee Premire"
+                </div>
+
+                <div class="date">
+                    On holidays 
+                </div>
+
+                <p>
+                   Making drinks
+                </p>
+
+                <ul>
+                    <li>RND on menue / Developing menue</li>
+                    <li>Making and serving drinks</li>
+                    <li>Calibrating the Grinder</li>
+                </ul>
+
+            </div>
+
+
+        
+
+        </section>
+
+
+        <!-- EDUCATION -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
+
+            <div class="education-item">
+
+                <h3>Bachelor of Computer Science</h3>
+
+                <div class="school">
+                    Binus University
+                </div>
+
+                <div class="date">
+                    2023 - Present
+                </div>
+
+                <p>
+                    Computer Science, Cyber Security
+                </p>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>High School</h3>
+
+                <div class="school">
+                    TIS - Teach Indonesia School
+                </div>
+
+                <div class="date">
+                    2020-2023
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Organization
+            </h2>
+
+
+            <div class="education-item">
+
+                <h3>HIMTI - Himpunan Mahasiswa Teknik Informatika</h3>
+
+                <div class="date">
+                    2024 - 2025
+                </div>
+
+            </div>
+
+
+            <div class="education-item">
+
+                <h3>CSC - Cyber Security Community</h3>
+
+                <div class="date">
+                    2024-2025
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PROJECTS -->
+
+        <section class="section">
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+
+            <div class="projects">
+
+
+                <div class="project">
+
+                    <h3>HTB - Guardian (hard)</h3>
+
+                    <p>
+                        I finished this HTB challange
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">XSS</span>
+                        <span class="tag">Nmap</span>
+                        <span class="tag">SSH</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>Research Diversity </h3>
+
+                    <p>
+                      Analisis Kebijakan dalam Menjunjung Tinggi Toleransi
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">Research</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>AI auto parking system (planning)</h3>
+
+                    <p>
+                        Me and my team planned the Ai for automated 
+                        parking
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">AI</span>
+                    </div>
+
+                </div>
+
+
+                <div class="project">
+
+                    <h3>HTB - CodePartwo (easy)</h3>
+
+                    <p>
+                        easy CTF
+                    </p>
+
+                    <div class="tags">
+                        <span class="tag">SSH pinning</span>
+                        <span class="tag">Nmap</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+            © 2026 Your Name. All Rights Reserved.
+        </footer>
+
+    </main>
+
+</div>
+
+</body>
+</html>
