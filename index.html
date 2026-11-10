@@ -331,24 +331,36 @@
             }
         }
 
-        /* PRINT / PDF FIX */
+        /* PRINT / PDF FULL BACKGROUND FIX */
         @media print {
+            @page {
+                margin: 0;
+                size: auto;
+            }
+
             body {
                 background: white;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .container {
                 margin: 0;
+                width: 100%;
+                max-width: 100%;
                 box-shadow: none;
+                min-height: 100vh;
+                display: grid;
+                grid-template-columns: 300px 1fr;
             }
 
             .sidebar {
-                background: #111827 !important;
+                background-color: #111827 !important;
                 color: white !important;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                height: 100%;
+                min-height: 100vh;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
             }
 
             .sidebar p, .contact-item, .skill-header {
@@ -356,11 +368,15 @@
             }
 
             .skill-bar {
-                background: #374151 !important;
+                background-color: #374151 !important;
             }
 
             .skill-progress {
-                background: #60a5fa !important;
+                background-color: #60a5fa !important;
+            }
+
+            .section, .project, .certificate-card, .timeline-item {
+                break-inside: avoid;
             }
 
             .download-btn {
