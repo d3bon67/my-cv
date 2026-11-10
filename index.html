@@ -246,7 +246,6 @@
         /* Clickable cards */
         .project, .certificate-card {
             display: block;
-            cursor: pointer;
             border: 1px solid #e5e7eb;
             padding: 20px;
             border-radius: 8px;
@@ -257,11 +256,6 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
             border-color: #2563eb;
-        }
-
-        .project:focus-visible, .certificate-card:focus-visible {
-            outline: 2px solid #2563eb;
-            outline-offset: 3px;
         }
 
         .project h3, .certificate-card h3 {
@@ -293,6 +287,23 @@
             border-radius: 4px;
             font-size: 11px;
             margin: 2px;
+        }
+
+        /* CARD LINK STYLE */
+        .card-link {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #4b5563;
+            word-break: break-all;
+        }
+
+        .card-link a {
+            color: #2563eb;
+            text-decoration: underline;
+        }
+
+        .card-link a:hover {
+            color: #1d4ed8;
         }
 
         /* BUTTON */
@@ -633,40 +644,34 @@
             <div class="certificates">
 
                 <!-- Certificate Item 1 -->
-                <a href="https://drive.google.com/drive/folders/1xfg4WI4ivR1ORBdqiRC5tWwzYcs6pTVz" target="_blank" rel="noopener noreferrer" class="certificate-card">
-
-                    <h3>Certificate (Click me)</h3>
-
+                <div class="certificate-card">
+                    <h3>Certificate</h3>
                     <div class="issuer">Organisasi dan Kegiatan lainnya</div>
-
                     <div class="date">Issued 2024</div>
-
                     <p></p>
-
                     <div class="tags">
                         <span class="tag">Organization</span>
                         <span class="tag">Activities</span>
                     </div>
-
-                </a>
+                    <div class="card-link">
+                        Link: <a href="https://drive.google.com/drive/folders/1xfg4WI4ivR1ORBdqiRC5tWwzYcs6pTVz" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/1xfg4WI4ivR1ORBdqiRC5tWwzYcs6pTVz</a>
+                    </div>
+                </div>
 
                 <!-- Certificate Item 2 -->
-                <a href="https://drive.google.com/drive/folders/16mktRzmFdrqCDY-enYq-zY1sQQ8aWGbj?usp=sharing" target="_blank" rel="noopener noreferrer" class="certificate-card">
-
-                    <h3>Ijazah SMA (Click me)</h3>
-
+                <div class="certificate-card">
+                    <h3>Ijazah SMA</h3>
                     <div class="issuer">Teach Indonesia School (TIS)</div>
-
                     <div class="date">2020 – 2023</div>
-
                     <p>Official secondary education completion diploma certifying academic qualification for higher education admission.</p>
-
                     <div class="tags">
                         <span class="tag">Diploma</span>
                         <span class="tag">Education</span>
                     </div>
-
-                </a>
+                    <div class="card-link">
+                        Link: <a href="https://drive.google.com/drive/folders/16mktRzmFdrqCDY-enYq-zY1sQQ8aWGbj?usp=sharing" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/16mktRzmFdrqCDY-enYq-zY1sQQ8aWGbj?usp=sharing</a>
+                    </div>
+                </div>
 
             </div>
 
@@ -684,68 +689,52 @@
 
             <div class="projects">
 
-
-                <a href="https://drive.google.com/drive/folders/1idEwQwq0c5hKp2CSytfn-QAMbviUMdzE?usp=sharing" target="_blank" rel="noopener noreferrer" class="project">
-
-                    <h3>HTB - Guardian - Hard (Click me for more info)</h3>
-
-                    <p>
-                        I finished this HTB challenge
-                    </p>
-
+                <div class="project">
+                    <h3>HTB - Guardian - Hard</h3>
+                    <p>I finished this HTB challenge</p>
                     <div class="tags">
                         <span class="tag">XSS</span>
                         <span class="tag">Nmap</span>
                         <span class="tag">SSH</span>
                     </div>
+                    <div class="card-link">
+                        Link: <a href="https://drive.google.com/drive/folders/1idEwQwq0c5hKp2CSytfn-QAMbviUMdzE?usp=sharing" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/1idEwQwq0c5hKp2CSytfn-QAMbviUMdzE?usp=sharing</a>
+                    </div>
+                </div>
 
-                </a>
-
-
-                <a href="https://drive.google.com/drive/folders/10GjjkPQ-o_CH50wK5XR8LSWYsRcucIHB?usp=sharing" target="_blank" rel="noopener noreferrer" class="project">
-
-                    <h3>Research Diversity (Click me for more info)</h3>
-
-                    <p>
-                        Analisis Kebijakan dalam Menjunjung Tinggi Toleransi
-                    </p>
-
+                <div class="project">
+                    <h3>Research Diversity</h3>
+                    <p>Analisis Kebijakan dalam Menjunjung Tinggi Toleransi</p>
                     <div class="tags">
                         <span class="tag">Research</span>
                     </div>
+                    <div class="card-link">
+                        Link: <a href="https://drive.google.com/drive/folders/10GjjkPQ-o_CH50wK5XR8LSWYsRcucIHB?usp=sharing" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/10GjjkPQ-o_CH50wK5XR8LSWYsRcucIHB?usp=sharing</a>
+                    </div>
+                </div>
 
-                </a>
-
-
-                <a href="https://drive.google.com/drive/folders/15T80XKAm2ne6JtnEx-chieec8NDzf25b?usp=sharing" target="_blank" rel="noopener noreferrer" class="project">
-
-                    <h3>AI auto parking system - Proposal (Click me for more info)</h3>
-
-                    <p>
-                        Me and my team planned the AI for automated parking
-                    </p>
-
+                <div class="project">
+                    <h3>AI auto parking system - Proposal</h3>
+                    <p>Me and my team planned the AI for automated parking</p>
                     <div class="tags">
                         <span class="tag">AI</span>
                     </div>
+                    <div class="card-link">
+                        Link: <a href="https://drive.google.com/drive/folders/15T80XKAm2ne6JtnEx-chieec8NDzf25b?usp=sharing" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/15T80XKAm2ne6JtnEx-chieec8NDzf25b?usp=sharing</a>
+                    </div>
+                </div>
 
-                </a>
-
-
-                <a href="https://drive.google.com/drive/folders/1X0yS9XaTx368GTxfJSE41n1vq2d2GNvk" target="_blank" rel="noopener noreferrer" class="project">
-
-                    <h3>HTB - CodePartwo - Easy - (Click me for more info)</h3>
-
-                    <p>
-                        easy CTF
-                    </p>
-
+                <div class="project">
+                    <h3>HTB - CodePartwo - Easy</h3>
+                    <p>easy CTF</p>
                     <div class="tags">
                         <span class="tag">SSH pinning</span>
                         <span class="tag">Nmap</span>
                     </div>
-
-                </a>
+                    <div class="card-link">
+                        Link: <a href="https://drive.google.com/drive/folders/1X0yS9XaTx368GTxfJSE41n1vq2d2GNvk" target="_blank" rel="noopener noreferrer">https://drive.google.com/drive/folders/1X0yS9XaTx368GTxfJSE41n1vq2d2GNvk</a>
+                    </div>
+                </div>
 
             </div>
 
