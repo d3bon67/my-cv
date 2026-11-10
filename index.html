@@ -18,6 +18,8 @@
             background: #f3f4f6;
             color: #1f2937;
             line-height: 1.6;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         a {
@@ -40,6 +42,8 @@
             background: #111827;
             color: white;
             padding: 35px 28px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         .profile {
@@ -102,7 +106,7 @@
             justify-content: space-between;
             font-size: 14px;
             margin-bottom: 5px;
-            color: #d1d5db;
+            color: #ffffff;
         }
 
         .skill-bar {
@@ -111,12 +115,16 @@
             background: #374151;
             border-radius: 10px;
             overflow: hidden;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         .skill-progress {
             height: 100%;
             background: #60a5fa;
             border-radius: 10px;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
         }
 
         .social-link {
@@ -313,6 +321,7 @@
 
         /* MOBILE */
         @media (max-width: 800px) {
+
             .container {
                 margin: 0;
                 display: block;
@@ -331,52 +340,28 @@
             }
         }
 
-        /* PRINT / PDF FULL BACKGROUND FIX */
+        /* PRINT */
         @media print {
-            @page {
-                margin: 0;
-                size: auto;
-            }
-
             body {
                 background: white;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
             .container {
                 margin: 0;
-                width: 100%;
-                max-width: 100%;
                 box-shadow: none;
-                min-height: 100vh;
-                display: grid;
-                grid-template-columns: 300px 1fr;
             }
 
             .sidebar {
-                background-color: #111827 !important;
+                background: #111827 !important;
                 color: white !important;
-                height: 100%;
-                min-height: 100vh;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
             }
 
-            .sidebar p, .contact-item, .skill-header {
-                color: #d1d5db !important;
-            }
-
-            .skill-bar {
-                background-color: #374151 !important;
-            }
-
-            .skill-progress {
-                background-color: #60a5fa !important;
-            }
-
-            .section, .project, .certificate-card, .timeline-item {
-                break-inside: avoid;
+            .sidebar .skill-header {
+                color: #ffffff !important;
             }
 
             .download-btn {
@@ -395,13 +380,21 @@
     <aside class="sidebar">
 
         <div class="profile">
+
+            <!-- Replace with your own photo -->
             <img src="me.jpeg" alt="Your Photo">
+
             <h1>Devon Ian Suryono</h1>
+
             <p>Cyber Security Analytics</p>
+
         </div>
 
+
         <!-- CONTACT -->
+
         <div class="sidebar-section">
+
             <h2>Contact</h2>
 
             <div class="contact-item">
@@ -418,62 +411,89 @@
                 <span class="contact-icon">📍</span>
                 <span>Jakarta, Indonesia</span>
             </div>
+
         </div>
 
+
         <!-- SKILLS -->
+
         <div class="sidebar-section">
+
             <h2>Skills</h2>
 
             <div class="skill">
+
                 <div class="skill-header">
                     <span>Nmap</span>
                     <span>90%</span>
                 </div>
+
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 90%;"></div>
                 </div>
+
             </div>
 
+
             <div class="skill">
+
                 <div class="skill-header">
                     <span>Wireshark</span>
                     <span>80%</span>
                 </div>
+
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 80%;"></div>
                 </div>
+
             </div>
 
+
             <div class="skill">
+
                 <div class="skill-header">
                     <span>C language</span>
                     <span>70%</span>
                 </div>
+
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 70%;"></div>
                 </div>
+
             </div>
 
+
             <div class="skill">
+
                 <div class="skill-header">
                     <span>Python</span>
                     <span>60%</span>
                 </div>
+
                 <div class="skill-bar">
                     <div class="skill-progress" style="width: 60%;"></div>
                 </div>
+
             </div>
+
         </div>
 
     </aside>
+
 
     <!-- ================= MAIN CONTENT ================= -->
 
     <main class="content">
 
+
         <!-- ABOUT -->
+
         <section class="section">
-            <h2 class="section-title">About Me</h2>
+
+            <h2 class="section-title">
+                About Me
+            </h2>
+
             <ul class="about-text" style="padding-left: 20px;">
                 <li>I'm an undergraduate from Binus University, and I'm ready to work in your company.</li>
                 <li>For starters I'm majoring in Cyber Security, I can use most of the tools that are required to work in the Cyber Security Field.</li>
@@ -484,126 +504,253 @@
             <a href="#" class="download-btn" onclick="window.print()">
                 Download / Print CV
             </a>
+
         </section>
 
+
         <!-- EXPERIENCE -->
+
         <section class="section">
-            <h2 class="section-title">Work Experience</h2>
+
+            <h2 class="section-title">
+                Work Experience
+            </h2>
+
 
             <div class="timeline-item">
+
                 <h3>Barista</h3>
-                <div class="company">"SNB Cafe" and "Ticovee Premire"</div>
-                <div class="date">On holidays</div>
-                <p>Making drinks</p>
+
+                <div class="company">
+                    "SNB Cafe" and "Ticovee Premire"
+                </div>
+
+                <div class="date">
+                    On holidays
+                </div>
+
+                <p>
+                Making drinks
+                </p>
+
                 <ul>
                     <li>RND on menu / Developing menu</li>
                     <li>Making and serving drinks</li>
                     <li>Calibrating the Grinder</li>
                 </ul>
+
             </div>
+
         </section>
+
 
         <!-- EDUCATION -->
+
         <section class="section">
-            <h2 class="section-title">Education</h2>
+
+            <h2 class="section-title">
+                Education
+            </h2>
+
 
             <div class="education-item">
+
                 <h3>Bachelor of Computer Science</h3>
-                <div class="school">Binus University</div>
-                <div class="date">2023 - Present</div>
-                <p>Computer Science, Cyber Security</p>
+
+                <div class="school">
+                    Binus University
+                </div>
+
+                <div class="date">
+                    2023 - Present
+                </div>
+
+                <p>
+                    Computer Science, Cyber Security
+                </p>
+
             </div>
 
+
             <div class="education-item">
+
                 <h3>High School</h3>
-                <div class="school">TIS - Teach Indonesia School</div>
-                <div class="date">2020-2023</div>
+
+                <div class="school">
+                    TIS - Teach Indonesia School
+                </div>
+
+                <div class="date">
+                    2020-2023
+                </div>
+
             </div>
+
         </section>
+
 
         <!-- ORGANIZATION -->
+
         <section class="section">
-            <h2 class="section-title">Organization</h2>
+
+            <h2 class="section-title">
+                Organization
+            </h2>
+
 
             <div class="education-item">
+
                 <h3>HIMTI - Himpunan Mahasiswa Teknik Informatika</h3>
-                <div class="date">2024 - 2025</div>
+
+                <div class="date">
+                    2024 - 2025
+                </div>
+
             </div>
 
+
             <div class="education-item">
+
                 <h3>CSC - Cyber Security Community</h3>
-                <div class="date">2024-2025</div>
+
+                <div class="date">
+                    2024-2025
+                </div>
+
             </div>
+
         </section>
 
+
         <!-- CERTIFICATES -->
+
         <section class="section">
-            <h2 class="section-title">Certification</h2>
+
+            <h2 class="section-title">
+                Certification
+            </h2>
+
             <div class="certificates">
+
+                <!-- Certificate Item 1 -->
                 <a href="https://drive.google.com/drive/folders/1xfg4WI4ivR1ORBdqiRC5tWwzYcs6pTVz" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <h3>Cybersecurity Training & Credentials</h3>
-                    <div class="issuer">Professional Certification</div>
+
+                    <h3>Certificate (Click me)</h3>
+
+                    <div class="issuer">Organisasi dan Kegiatan lainnya</div>
+
                     <div class="date">Issued 2024</div>
-                    <p>Formal validation of technical capabilities in network security analysis, vulnerability assessment, and defensive security strategies.</p>
+
+                    <p></p>
+
                     <div class="tags">
-                        <span class="tag">Cyber Security</span>
-                        <span class="tag">Network Defense</span>
+                        <span class="tag">Organization</span>
+                        <span class="tag">Activities</span>
                     </div>
+
                 </a>
 
+                <!-- Certificate Item 2 -->
                 <a href="https://drive.google.com/drive/folders/16mktRzmFdrqCDY-enYq-zY1sQQ8aWGbj?usp=sharing" target="_blank" rel="noopener noreferrer" class="certificate-card">
-                    <h3>High School Diploma (Ijazah)</h3>
+
+                    <h3>Ijazah SMA (Click me)</h3>
+
                     <div class="issuer">Teach Indonesia School (TIS)</div>
+
                     <div class="date">2020 – 2023</div>
+
                     <p>Official secondary education completion diploma certifying academic qualification for higher education admission.</p>
+
                     <div class="tags">
                         <span class="tag">Diploma</span>
                         <span class="tag">Education</span>
                     </div>
+
                 </a>
+
             </div>
+
         </section>
 
+
         <!-- PROJECTS -->
+
         <section class="section">
-            <h2 class="section-title">Projects</h2>
+
+            <h2 class="section-title">
+                Projects
+            </h2>
+
+
             <div class="projects">
+
+
                 <a href="https://drive.google.com/drive/folders/1idEwQwq0c5hKp2CSytfn-QAMbviUMdzE?usp=sharing" target="_blank" rel="noopener noreferrer" class="project">
-                    <h3>HTB - Guardian (hard)</h3>
-                    <p>I finished this HTB challenge</p>
+
+                    <h3>HTB - Guardian - Hard (Click me for more info)</h3>
+
+                    <p>
+                        I finished this HTB challenge
+                    </p>
+
                     <div class="tags">
                         <span class="tag">XSS</span>
                         <span class="tag">Nmap</span>
                         <span class="tag">SSH</span>
                     </div>
+
                 </a>
 
+
                 <a href="https://drive.google.com/drive/folders/10GjjkPQ-o_CH50wK5XR8LSWYsRcucIHB?usp=sharing" target="_blank" rel="noopener noreferrer" class="project">
-                    <h3>Research Diversity</h3>
-                    <p>Analisis Kebijakan dalam Menjunjung Tinggi Toleransi</p>
+
+                    <h3>Research Diversity (Click me for more info)</h3>
+
+                    <p>
+                        Analisis Kebijakan dalam Menjunjung Tinggi Toleransi
+                    </p>
+
                     <div class="tags">
                         <span class="tag">Research</span>
                     </div>
+
                 </a>
 
+
                 <a href="https://drive.google.com/drive/folders/15T80XKAm2ne6JtnEx-chieec8NDzf25b?usp=sharing" target="_blank" rel="noopener noreferrer" class="project">
-                    <h3>AI auto parking system (planning)</h3>
-                    <p>Me and my team planned the AI for automated parking</p>
+
+                    <h3>AI auto parking system - Proposal (Click me for more info)</h3>
+
+                    <p>
+                        Me and my team planned the AI for automated parking
+                    </p>
+
                     <div class="tags">
                         <span class="tag">AI</span>
                     </div>
+
                 </a>
 
+
                 <a href="https://drive.google.com/drive/folders/1X0yS9XaTx368GTxfJSE41n1vq2d2GNvk" target="_blank" rel="noopener noreferrer" class="project">
-                    <h3>HTB - CodePartwo (easy)</h3>
-                    <p>easy CTF</p>
+
+                    <h3>HTB - CodePartwo - Easy - (Click me for more info)</h3>
+
+                    <p>
+                        easy CTF
+                    </p>
+
                     <div class="tags">
                         <span class="tag">SSH pinning</span>
                         <span class="tag">Nmap</span>
                     </div>
+
                 </a>
+
             </div>
+
         </section>
+
 
         <footer>
             © 2026 Devon Ian Suryono. All Rights Reserved.
